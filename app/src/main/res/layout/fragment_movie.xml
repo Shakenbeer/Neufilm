@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@android:color/darker_gray"
+        tools:context="presentation.movie.LatestMoviesFragment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.75"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:shapeAppearance="?shapeAppearanceHuge">
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/posterImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="48dp"
+            android:elevation="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="2:3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintWidth_percent="0.3"
+            app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+            tools:background="@android:color/holo_orange_light"
+            tools:srcCompat="@drawable/no_movie" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/posterImageView"
+            app:layout_constraintTop_toTopOf="@id/background"
+            tools:text="Movie Title Movie Title Movie Title" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/genresTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?textAppearanceBody2"
+            app:layout_constraintStart_toStartOf="@+id/titleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+            tools:text="Genre1, Genre2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/averageVoteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:drawableTint="#FD7468"
+            android:textAppearance="?textAppearanceBody1"
+            app:drawableStartCompat="@drawable/ic_star_20"
+            app:layout_constraintBottom_toBottomOf="@id/posterImageView"
+            app:layout_constraintStart_toStartOf="@+id/titleTextView"
+            tools:text="9.3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/plotTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:ellipsize="end"
+            android:text="@string/plot_summary"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/posterImageView"
+            app:layout_constraintTop_toBottomOf="@id/posterImageView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/plotTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="48dp"
+            android:ellipsize="end"
+            android:maxLines="8"
+            android:text="@string/plot_summary"
+            android:textAppearance="?textAppearanceBody2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/posterImageView"
+            app:layout_constraintTop_toBottomOf="@id/plotTitleTextView"
+            tools:text="The tale of an extraordinary family, the Madrigals, who live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift from super strength to the power to heal—every child except one, Mirabel. But when she discovers that the magic surrounding the Encanto is in danger, Mirabel decides that she, the only ordinary Madrigal, might just be her exceptional family's last hope." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/castTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:ellipsize="end"
+            android:text="@string/cast"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/posterImageView"
+            app:layout_constraintTop_toBottomOf="@id/plotTextView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/actorsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="48dp"
+            android:paddingEnd="48dp"
+            android:paddingBottom="24dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/castTextView"
+            tools:listitem="@layout/item_actor" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

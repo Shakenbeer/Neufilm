@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Stas/MyProjects/Neufilm/app/src/main/res/drawable/ic_star.xml" value="0.307" />
+        <entry key="..\:/Users/Stas/MyProjects/Neufilm/app/src/main/res/drawable/ic_star_16.xml" value="0.307" />
+        <entry key="..\:/Users/Stas/MyProjects/Neufilm/app/src/main/res/layout/activity_main.xml" value="0.5427083333333333" />
+        <entry key="..\:/Users/Stas/MyProjects/Neufilm/app/src/main/res/layout/fragment_latest_movies.xml" value="0.15734265734265734" />
+        <entry key="..\:/Users/Stas/MyProjects/Neufilm/app/src/main/res/layout/fragment_movie.xml" value="0.22" />
+        <entry key="..\:/Users/Stas/MyProjects/Neufilm/app/src/main/res/layout/item_actor.xml" value="0.1" />
+        <entry key="..\:/Users/Stas/MyProjects/Neufilm/app/src/main/res/layout/item_loading.xml" value="0.2699822380106572" />
+        <entry key="..\:/Users/Stas/MyProjects/Neufilm/app/src/main/res/layout/item_movie.xml" value="0.29270833333333335" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Neufilm</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="plot_summary">Plot Summary</string>
+    <string name="cast">Cast</string>
+    <string name="retry">Retry</string>
+    <string name="unexpected_outcome">Oops! Unexpected outcome.</string>
+    <string name="disaster">Disaster</string>
+    <string name="page_not_found">404</string>
+</resources>
